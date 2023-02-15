@@ -40,6 +40,10 @@ document.getElementById('save_btn').addEventListener('click', function () {
   const savingAmount = (income * saveInputValue) / 100;
   const current_balance = balance('current_balance');
   const remaining_balance = current_balance - savingAmount;
+  if (current_balance < savingAmount) {
+    alert('you can not save because your amount is too low');
+    return;
+  }
   setValue('saving_amount', savingAmount);
   setValue('remaining_balance', remaining_balance);
 });
