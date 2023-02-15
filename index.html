@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>money master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="grid grid-cols-2 gap-4 container mx-auto mt-4">
+      <div>
+        <img class="w-full h-full" src="./Calculators-1.jpg" alt="" />
+      </div>
+      <div class="text-center shadow-xl bg-gray-200 p-3">
+        <h1 class="text-4xl font-semibold mb-3">Income</h1>
+
+        <label for="">Income :</label>
+        <input class="p-1" id="income_input_field" type="text" />
+        <br />
+        <h1 class="text-2xl font-semibold mb-2 mt-3">Expense</h1>
+        <label for="">Food :</label>
+        <input class="p-1" id="food_input_field" type="text" />
+        <br />
+        <br />
+        <label for="">Rent :</label>
+        <input class="p-1" id="rent_input_field" type="text" />
+        <br />
+        <br />
+        <label for="">Clothes :</label>
+        <input class="p-1 mb-1" id="cloth_input_field" type="text" />
+        <br />
+        <button
+          id="calculate_btn"
+          class="px-2 py-1 bg-blue-400 rounded-md text-white mb-2"
+        >
+          Calculate
+        </button>
+        <br />
+        <h1 class="font-semibold mt-1 mb-1">
+          Total Expense: <span id="total_expense">00</span>
+        </h1>
+        <h1 class="font-semibold mb-1">
+          Balance :<span id="current_balance">00</span>
+        </h1>
+        <p>
+          save : <input class="p-1" id="save_input_field" type="text" /> %
+          <button
+            class="px-2 py-1 bg-blue-400 rounded-md text-white"
+            id="save_btn"
+          >
+            save
+          </button>
+        </p>
+        <h1 class="font-semibold mb-2 mt-3">
+          Saving Amount : <span id="saving_amount">00</span>
+        </h1>
+        <h1 class="font-semibold">
+          Remaining Balance : <span id="remaining_balance">00</span>
+        </h1>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
