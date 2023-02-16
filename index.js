@@ -19,12 +19,19 @@ document.getElementById('calculate_btn').addEventListener('click', function () {
   const foodCost = expenseValue('food_input_field');
   const rentCost = expenseValue('rent_input_field');
   const clothCost = expenseValue('cloth_input_field');
+
+  const incomeValue = expenseValue('income_input_field');
   if (isNaN(foodCost) || isNaN(rentCost) || isNaN(clothCost)) {
     alert('Please give number as an input');
 
     return;
   }
+
   const totalCost = foodCost + rentCost + clothCost;
+  if (incomeValue < totalCost) {
+    alert('you can"t effort this expense because of low income');
+    return;
+  }
   setValue('total_expense', totalCost);
   const income = expenseValue('income_input_field');
   const current_balance = income - totalCost;
